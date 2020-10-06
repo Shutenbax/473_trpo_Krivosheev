@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="window">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Rublev_Krivosheev_473</property>
+    <property name="window_position">center</property>
+    <property name="icon_name">dialog-warning</property>
+    <property name="gravity">center</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkLabel" id="lab">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="xpad">20</property>
+        <property name="ypad">20</property>
+        <property name="label" translatable="yes">Hello Yes No Sarcazm
+Alexey Krivosheev from Kirishi
+Dmitry Rublev from Kirov
+ Present 473</property>
+        <attributes>
+          <attribute name="font-desc" value="IPAGothic Bold Italic 15"/>
+          <attribute name="style" value="italic"/>
+          <attribute name="weight" value="heavy"/>
+          <attribute name="variant" value="normal"/>
+          <attribute name="stretch" value="ultra-expanded"/>
+          <attribute name="underline" value="True"/>
+          <attribute name="foreground" value="#7373d2d21616"/>
+          <attribute name="background" value="#fcfce9e94f4f"/>
+          <attribute name="underline-color" value="#88888a8a8585"/>
+          <attribute name="strikethrough-color" value="#a4a400000000"/>
+          <attribute name="gravity-hint" value="natural"/>
+        </attributes>
+      </object>
+    </child>
+  </object>
+</interface>
