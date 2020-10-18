@@ -1,4 +1,5 @@
 .wnd
 {
-background: red;
+color: red;
+background-color: grey;
 }

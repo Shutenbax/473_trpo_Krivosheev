@@ -225,7 +225,7 @@
             <property name="can_focus">False</property>
             <child>
               <object class="GtkCheckButton" id="ALockCheck">
-                <property name="label" translatable="yes">A</property>
+                <property name="label" translatable="yes">1</property>
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
                 <property name="can_focus">True</property>
@@ -240,7 +240,7 @@
             </child>
             <child>
               <object class="GtkCheckButton" id="BLockCheck">
-                <property name="label" translatable="yes">B</property>
+                <property name="label" translatable="yes">2</property>
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
                 <property name="can_focus">True</property>
@@ -255,7 +255,7 @@
             </child>
             <child>
               <object class="GtkCheckButton" id="CLockCheck">
-                <property name="label" translatable="yes">C</property>
+                <property name="label" translatable="yes">4</property>
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
                 <property name="can_focus">True</property>
@@ -270,7 +270,7 @@
             </child>
             <child>
               <object class="GtkCheckButton" id="DLockCheck">
-                <property name="label" translatable="yes">D</property>
+                <property name="label" translatable="yes">8</property>
                 <property name="visible">True</property>
                 <property name="sensitive">False</property>
                 <property name="can_focus">True</property>
@@ -290,16 +290,6 @@
           </packing>
         </child>
         <child>
-          <object class="GtkTextView" id="TextDrop">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-          </object>
-          <packing>
-            <property name="left_attach">1</property>
-            <property name="top_attach">4</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkLabel">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
@@ -310,6 +300,21 @@
             <property name="top_attach">4</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkEntry" id="TextDrop">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="max_length">2</property>
+            <property name="text" translatable="yes">0</property>
+          </object>
+          <packing>
+            <property name="left_attach">1</property>
+            <property name="top_attach">4</property>
+          </packing>
+        </child>
+        <style>
+          <class name="back"/>
+        </style>
       </object>
     </child>
   </object>

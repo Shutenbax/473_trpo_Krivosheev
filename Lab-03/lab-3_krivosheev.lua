@@ -44,28 +44,46 @@ update()
 end
 
 function update_alt()
-if type(tonumber(uint.TextDrop.text))=='number' and tonumber(uint.TextDrop.text)=>0 and tonumber(uint.TextDrop.text)<16
+if type(tonumber(uint.TextDrop.text))=='number'
+then
+if tonumber(uint.TextDrop.text)>=0 and tonumber(uint.TextDrop.text)<16
 	then
-	v=tonumber(uint.TextDrop.text)
-end
-while v>0 
-then
-if v%2==1
-		then
-		ALockCheck.active=true;
-		v-=1;
-else
-if (v/8)%2==0
-then
+	w=tonumber(uint.TextDrop.text)
 
+
+if w>=8
+then
+	uint.DLockCheck.active=true
+		w=w-8
+end
+if w>=4
+	then
+	uint.CLockCheck.active=true
+		w=w-4
+end
+if w>=2
+	then
+	uint.BLockCheck.active=true
+		w=w-2
 	end
+if w%2==1
+		then
+		uint.ALockCheck.active=true
+		w=w-1
+end
 end 
+end
+end
 
 function uint.TextDrop:on_changed(...)
+uint.ALockCheck.active=false
+uint.BLockCheck.active=false
+uint.CLockCheck.active=false
+uint.DLockCheck.active=false
 update_alt()
 end
 
-uint.wnd.title = 'lab3Krivoy'
+uint.wnd.title = 'lab_3_Krivosheev'
 uint.wnd.on_destroy = gtk.main_quit
 uint.wnd:show_all()
 
