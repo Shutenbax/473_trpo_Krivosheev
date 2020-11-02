@@ -1,0 +1,9 @@
+.wnd
+{
+color: black;
+background-color: yellow;
+}
+.back
+{
+background-color: lightblue;
+}
