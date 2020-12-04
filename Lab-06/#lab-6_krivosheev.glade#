@@ -16,8 +16,8 @@
   </object>
   <object class="GtkWindow" id="wnd">
     <property name="can_focus">False</property>
-    <property name="default_width">128</property>
-    <property name="default_height">128</property>
+    <property name="default_width">500</property>
+    <property name="default_height">500</property>
     <child>
       <placeholder/>
     </child>
@@ -27,7 +27,7 @@
         <property name="can_focus">True</property>
         <property name="shadow_type">in</property>
         <child>
-          <object class="GtkTreeView" id="lst_items">
+          <object class="GtkTreeView">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="model">stor_items</property>

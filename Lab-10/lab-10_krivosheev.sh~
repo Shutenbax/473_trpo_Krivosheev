@@ -1,0 +1,3 @@
+
+rm lab_10_lib_krivosheev.so
+gcc -shared -s -O3 -Wall -fPIC lab-10_krivosheev.c -o lab_10_lib_krivosheev.so -llua5/3 -I/usr/include/lua5.3
