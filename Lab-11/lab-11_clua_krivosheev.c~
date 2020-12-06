@@ -15,7 +15,7 @@ static int my_slove_eq(lua_State *l)
 		lua_pushnil(l);
 		lua_pushnil(l);
 	}
-	else if (d == 0)
+	else if (d > 0)
 	{
 		float x1 = (-b + sqrt(d)) / (2.0f * a);
 		float x2 = (-b - sqrt(d)) / (2.0f * a);
@@ -33,6 +33,24 @@ static int my_slove_eq(lua_State *l)
 	return 2;
 }
 
+static int my_sin_angle(lua_State *l)
+{
+	float angle = (float) luaL_checknumber(l, 1);
+	float r =angle*3.141f/180.0f;
+	r = r*r*r*r*r/120.0f-r*r*r/6.0f+r;
+	lua_pushnumber(l, r);
+	return 1;
+}
+
+static int my_cos_angle(lua_State *l)
+{
+	float angle = (float) luaL_checknumber(l, 1);
+	float r =angle*3.141f/180.0f;
+	r = 1.0f-(r*r/2.0f+r*r*r*r/24.0f+r*r*r*r*r*r/720.0f);
+	lua_pushnumber(l, r);
+	return 1;
+}
+
 int main()
 {
 	lua_State *l = luaL_newstate();
@@ -43,6 +61,12 @@ int main()
 
 	lua_pushcfunction(l, my_slove_eq);
 	lua_setglobal(l, "solve_eq");
+
+	lua_pushcfunction(l, my_sin_angle);
+	lua_setglobal(l, "sin_angle");	
+	
+	lua_pushcfunction(l, my_cos_angle);
+	lua_setglobal(l, "cos_angle");
 
 	lua_getglobal(l, "run");
 	lua_pcall(l, 0, 0, 0);

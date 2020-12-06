@@ -24,4 +24,4 @@ $(RESULT): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 
--include $(DEPS)
+-include $(Deps)
